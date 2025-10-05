@@ -1,0 +1,135 @@
+/* General Reset */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* Root container */
+.aegisorb-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Header */
+.header {
+  height: 60px;
+  background: linear-gradient(90deg, #00111a, #002b40);
+  color: #00e5ff;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.15);
+}
+
+/* Main Layout */
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Orbital View Container */
+.orbital-view {
+  flex: 2;
+  position: relative;
+  background: black;
+  overflow: hidden;
+}
+
+/* Panels Section (right side) */
+.side-panels {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 10, 10, 0.95);
+  border-left: 1px solid #111;
+}
+
+/* Panel Common Style */
+.panel {
+  flex: 1;
+  padding: 1.2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.05);
+}
+
+/* Threat Dashboard */
+.threat-dashboard h2,
+.business-panel h2 {
+  color: #00aaff;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #00aaff;
+  padding-bottom: 0.5rem;
+}
+
+.log-container {
+  flex: 1;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.log-entry {
+  margin-bottom: 0.3rem;
+  color: #ccc;
+}
+
+.log-container::-webkit-scrollbar {
+  width: 6px;
+}
+.log-container::-webkit-scrollbar-thumb {
+  background: #00aaff;
+  border-radius: 3px;
+}
+
+/* Business Panel */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+
+.info-card {
+  background: rgba(0, 30, 40, 0.7);
+  border: 1px solid #003f5c;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 200, 255, 0.1);
+  transition: 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+.info-card h3 {
+  font-size: 1rem;
+  color: #00eaff;
+  margin-bottom: 0.5rem;
+}
+
+.info-card p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Canvas */
+canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
